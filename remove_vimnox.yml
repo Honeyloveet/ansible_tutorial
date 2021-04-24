@@ -9,12 +9,7 @@
       update_cache: yes
     when: ansible_distribution == "Ubuntu"
 
-  - name: remove apache2 package
+  - name: remove vim-nox package
     apt:
-      name: apache2
-      state: absent
-
-  - name: remove add php support for apache
-    apt:
-      name: libapache2-mod-php
+      name: vim-nox
       state: absent
